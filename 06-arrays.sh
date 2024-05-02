@@ -7,7 +7,7 @@ MOVIES=("RRR" "DJTILLU" "MANINFIRE")
 
 # list always starts with 0
 
-echo " Fisrt movie is : ${MOVIES[1]}
-echo " Second movie is : ${MOVIES[2]}
-echo " thired movie is : ${MOVIES[3]}
+echo " Fisrt movie is : ${MOVIES[0]}
+echo " Second movie is : ${MOVIES[1]}
+echo " thired movie is : ${MOVIES[2]}
 echo " MOVIES is : ${MOVIES[@]}
