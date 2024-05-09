@@ -2,7 +2,7 @@
 
 USERID=$(id -u)
 
-if [ USERID -ne 0]
+if [ $USERID -ne 0 ]
 then
     echo " please run this script with superuser "
     exit 1 
@@ -20,7 +20,7 @@ fi
 
 dnf install git -y
 
-if [ $? -ne 0]
+if [ $? -ne 0 ]
 then
    echo " GIT installation is failed "
 else
