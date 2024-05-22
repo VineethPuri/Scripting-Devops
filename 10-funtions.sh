@@ -4,7 +4,6 @@ USERID=$(id -u)
 
 VALIDATE(){
 
-}
 
 if [ $USERID -ne 0 ]
 then
@@ -13,6 +12,8 @@ then
 else
     echo " you are superuser "
 fi
+
+}
 
 dnf install mysql -y
 
