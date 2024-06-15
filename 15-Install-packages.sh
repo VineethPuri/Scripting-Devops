@@ -13,7 +13,7 @@ fi
 for i in $@
 do
   echo "Package need to install: $i"
-  dnf list installed $i
+  yum list installed $i
   if [ $? -eq 0]
   then
       echo " $i already installed "
