@@ -4,6 +4,7 @@ USERID=$(id -u)
 TIMESTAMP=$(date +%F-%H-%M-%S)
 SCRIPTNAME=$( echo $0 | cut -d "." -f1 )
 LOGFILE=/tmp/$SCRIPTNAME-$TIMESTAMP.log
+mkdir -p /tmp
 
 if [ $USERID -ne 0 ]
 then
@@ -13,7 +14,7 @@ else
    echo "You are super user"
 fi
 
-for i in $@
+for i in "$@"
 do
   echo "Package need to install: $i"
   dnf list installed $i &>>$LOGFILE
