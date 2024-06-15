@@ -21,6 +21,7 @@ do
   then
       echo " $i already installed "
    else
-      echo " $i need to be installed "
+      echo " $i need to be installed... "
+      dnf install $i &>>$LOGFILE
    fi
 done
