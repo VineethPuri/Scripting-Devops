@@ -22,6 +22,6 @@ do
       echo " $i already installed "
    else
       echo " $i need to be installed... "
-      dnf install $i &>>$LOGFILE
+      dnf install -y $i &>>$LOGFILE
    fi
 done
