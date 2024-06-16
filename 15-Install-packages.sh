@@ -24,7 +24,7 @@ do
    else
       echo " $i need to be installed... "
       dnf install -y $i &>>$LOGFILE
-      if [ $? -eq 0]
+      if [ $? -eq 0 ]
       then
          echo " $i not installed... "
       else
