@@ -27,7 +27,7 @@ do
   then
       echo -e "$i ${G}already installed${N}"
    else
-      echo -e "$i ${R}need to be installed${N}"
+      echo -e "$i need to be ${R}installed${N}"
       dnf install -y $i &>>$LOGFILE
       if [ $? -eq 0 ]
       then
