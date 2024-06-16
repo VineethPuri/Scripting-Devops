@@ -32,7 +32,7 @@ do
       then
          echo -e "$i is $YSUCCESSFULLY INSTALLED$N"
       else
-         echo " -e $i is ${R}FAILED to INSTALL${N}"
+         echo -e "$i is ${R}FAILED to INSTALL${N}"
       fi
    fi
 done
