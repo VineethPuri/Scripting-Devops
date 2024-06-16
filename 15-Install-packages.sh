@@ -27,6 +27,8 @@ do
       if [ $? -eq 0]
       then
          echo " $i not installed... "
+      else
+         echo " $i is successfully installed "
       fi
    fi
 done
