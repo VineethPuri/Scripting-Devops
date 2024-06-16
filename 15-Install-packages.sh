@@ -26,9 +26,9 @@ do
       dnf install -y $i &>>$LOGFILE
       if [ $? -eq 0 ]
       then
-         echo " $i not installed... "
+         echo " $i is successfully installed... "
       else
-         echo " $i is successfully installed "
+         echo " $i is failed to install... "
       fi
    fi
 done
