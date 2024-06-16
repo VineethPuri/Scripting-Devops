@@ -5,6 +5,10 @@ TIMESTAMP=$(date +%F-%H-%M-%S)
 SCRIPTNAME=$( echo $0 | cut -d "." -f1 )
 LOGFILE=/tmp/$SCRIPTNAME-$TIMESTAMP.log
 mkdir -p /tmp
+R="\e[31m"
+G="\e[32m"
+N='\e[0m"
+Y="\e[33m"
 
 if [ $USERID -ne 0 ]
 then
@@ -20,15 +24,15 @@ do
   dnf list installed $i &>>$LOGFILE
   if [ $? -eq 0 ]
   then
-      echo " $i already installed "
+      echo -e "$i $G already installed $N"
    else
-      echo " $i need to be installed... "
+      echo -e "$i $R need to be installed $N"
       dnf install -y $i &>>$LOGFILE
       if [ $? -eq 0 ]
       then
-         echo " $i is successfully installed... "
+         echo -e "$i is $Y SUCCESSFULLY INSTALLED $N"
       else
-         echo " $i is failed to install... "
+         echo "$i is $R FAILED to INSTALL $N"
       fi
    fi
 done
