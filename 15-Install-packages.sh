@@ -7,8 +7,8 @@ LOGFILE=/tmp/$SCRIPTNAME-$TIMESTAMP.log
 mkdir -p /tmp
 R="\e[31m"
 G="\e[32m"
-N='\e[0m"
 Y="\e[33m"
+N='\e[0m"
 
 if [ $USERID -ne 0 ]
 then
@@ -32,7 +32,7 @@ do
       then
          echo -e "$i is $Y SUCCESSFULLY INSTALLED $N"
       else
-         echo "$i is $R FAILED to INSTALL $N"
+         echo " -e $i is $R FAILED to INSTALL $N"
       fi
    fi
 done
