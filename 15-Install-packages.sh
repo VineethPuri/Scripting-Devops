@@ -24,15 +24,15 @@ do
   dnf list installed $i &>>$LOGFILE
   if [ $? -eq 0 ]
   then
-      echo -e "$i $G already installed $N"
+      echo -e "$i $Galready installed$N"
    else
-      echo -e "$i $R need to be installed $N"
+      echo -e "$i $Rneed to be installed$N"
       dnf install -y $i &>>$LOGFILE
       if [ $? -eq 0 ]
       then
-         echo -e "$i is $Y SUCCESSFULLY INSTALLED $N"
+         echo -e "$i is $YSUCCESSFULLY INSTALLED$N"
       else
-         echo " -e $i is $R FAILED to INSTALL $N"
+         echo " -e $i is ${R}FAILED to INSTALL${N}"
       fi
    fi
 done
